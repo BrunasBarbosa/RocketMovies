@@ -39,7 +39,9 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
-  > button:last-child{
+  > a {
+    display: flex;
+    justify-content: center;
     margin-top: 4.2rem;
   }
   

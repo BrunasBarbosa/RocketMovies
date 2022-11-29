@@ -3,7 +3,7 @@ import { Container, Background, Form } from './styles';
 import { Button } from '../../components/Button';
 import { FiMail, FiLock } from 'react-icons/fi';
 import { Input } from '../../components/Input';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function SignIn() {
   return(
@@ -26,7 +26,10 @@ export function SignIn() {
         />
         <Button title="Entrar"/>
 
-        <ButtonText title="Criar conta"/>
+        <Link to="/register">
+          <ButtonText title="Criar conta"/>
+        </Link>
+        
       </Form>
 
 

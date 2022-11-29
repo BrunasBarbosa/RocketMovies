@@ -39,7 +39,7 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
-  > footer {
+  > a {
     margin-top: 4.2rem;
     display: flex;
     align-items: center;
