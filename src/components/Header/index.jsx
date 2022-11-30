@@ -12,11 +12,11 @@ export function Header() {
 
       <Profile>
         <div>
-          <Link class="name">Bruna Barbosa</Link>
+          <Link className="name">Bruna Barbosa</Link>
           <ButtonText title="sair" />
         </div>
 
-        <Link class="profile">
+        <Link className="profile">
           <img
             src='https://github.com/brunasbarbosa.png'
             alt='Foto do usuário'
