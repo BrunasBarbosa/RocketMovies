@@ -39,6 +39,14 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
+  > div {
+    margin-bottom: 8px;
+  }
+
+  > button {
+    margin-top: 1rem;
+  }
+
   > a {
     margin-top: 4.2rem;
     display: flex;

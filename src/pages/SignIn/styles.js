@@ -44,5 +44,13 @@ export const Form = styled.form`
     justify-content: center;
     margin-top: 4.2rem;
   }
+
+  > div {
+    margin-bottom: 8px;
+  }
+
+  > button {
+    margin-top: 1.8rem;
+  }
   
 `;

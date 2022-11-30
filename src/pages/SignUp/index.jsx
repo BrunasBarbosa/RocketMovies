@@ -21,7 +21,7 @@ export function SignUp() {
 
         <Input
           placeholder="E-mail"
-          type="email"
+          type="text"
           icon={FiMail}
         />
 

@@ -15,7 +15,7 @@ export function SignIn() {
         
         <Input 
           placeholder="E-mail"
-          type="email"
+          type="text"
           icon={FiMail}
         />
 
@@ -29,7 +29,7 @@ export function SignIn() {
         <Link to="/register">
           <ButtonText title="Criar conta"/>
         </Link>
-        
+
       </Form>
 
 
