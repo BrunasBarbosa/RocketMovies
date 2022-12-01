@@ -22,21 +22,34 @@ export const Container = styled.div`
     
     svg {
       width: 1.6rem;
-      height: 1.66rem;
+      height: 1.6rem;
     }
   }
 
 `;
 
 export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  max-width: 34rem;
+  margin: 6.4rem auto;
+  gap: .8rem;
+
+  > div:nth-child(4) {
+    margin-top: 1.6rem;
+  }
+
+  > button {
+    margin-top: 1.6rem;
+  }
 `;
 
 export const Avatar = styled.div`
-  margin: -9rem auto 3.2rem;
+  margin: -16rem auto 3.2rem;
   position: relative;
 
-  width: 186px;
-  height: 186px;
+    width: 18.6rem;
+    height: 18.6rem;
 
   > img {
     width: 18.6rem;
