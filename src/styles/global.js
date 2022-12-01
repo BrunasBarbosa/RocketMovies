@@ -45,4 +45,8 @@ export default createGlobalStyle`
   a:hover {
     filter: brightness(0.9);
   }
+
+  p {
+    font-family: var(--font-second);
+  }
 `

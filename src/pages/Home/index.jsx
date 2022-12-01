@@ -1,25 +1,47 @@
 import { Container, Content, Section, NewNote } from './styles';
 import { Header } from '../../components/Header';
-import { Tag } from '../../components/Tag';
 import { FiPlus } from 'react-icons/fi';
+import { Note } from '../../components/Note';
 
 export function Home() {
   return (
     <Container>
       <Header />
 
-      <Section>
-        <h1>Meus Filmes</h1>
-        <div>
-          < FiPlus />
-          Adicionar filme
-        </div>
-      </Section>
+        <Section>
+          <h1>Meus Filmes</h1>
+          <NewNote>
+            < FiPlus />
+            Adicionar filme
+          </NewNote>
+        </Section>
 
-      <Content>
+      <main>
+        <Content>
+          <Note data={{
+            title: 'Interestelar', tags: [
+              { id: 1, name: 'Ficção científica' },
+              { id: 2, name: 'Drama' },
+              { id: 3, name: 'Família' },
+            ]
+          }} />
 
-      </Content>
+          <Note data={{
+            title: 'Interestelar', tags: [
+              { id: 1, name: 'Ficção científica' },
+              { id: 2, name: 'Drama' },
+              { id: 3, name: 'Família' },
+            ]
+          }} />
 
+          <Note data={{
+            title: 'Interestelar', tags: [
+              { id: 1, name: 'Ficção científica' },
+              { id: 2, name: 'Astronauta' },
+            ]
+          }} />
+        </Content>
+      </main>
     </Container>
 
   )
