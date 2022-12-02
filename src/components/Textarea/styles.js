@@ -9,6 +9,7 @@ export const Container = styled.textarea`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   color: ${({ theme }) => theme.COLORS.WHITE};
 
+  border-radius: 1rem;
   border: none;
   resize: none;
 
