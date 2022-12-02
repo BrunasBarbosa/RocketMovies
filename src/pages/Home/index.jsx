@@ -10,7 +10,7 @@ export function Home() {
 
         <Section>
           <h1>Meus Filmes</h1>
-          <NewNote>
+          <NewNote to="/new">
             < FiPlus />
             Adicionar filme
           </NewNote>

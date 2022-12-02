@@ -11,19 +11,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-
-    a {
-      display: flex;
-      gap: .8rem;
-      align-items: center;
-      font-size: 1.6rem;
-      color: ${({ theme }) => theme.COLORS.SALMON};
-    }
-    
-    svg {
-      width: 1.6rem;
-      height: 1.6rem;
-    }
   }
 
 `;
