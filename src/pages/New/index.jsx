@@ -26,8 +26,8 @@ export function New() {
         <h2>Marcadores</h2>
 
         <div className="tags">
-          <NoteItem isNew placeholder="Novo marcador"/>
           <NoteItem value="Astronauta"/>
+          <NoteItem isNew placeholder="Novo marcador"/>
         </div>
 
         <section>
