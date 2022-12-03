@@ -52,5 +52,4 @@ export const Form = styled.form`
   > button {
     margin-top: 1.8rem;
   }
-  
 `;

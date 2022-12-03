@@ -4,15 +4,14 @@ export const Container = styled.div`
     width: 100%;
 
   > header {
+    display: flex;
     width: 100%;
     height: 14.4rem;
     padding: 0 14.4rem;
 
-    display: flex;
     align-items: center;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   }
-
 `;
 
 export const Form = styled.form`
@@ -34,9 +33,6 @@ export const Form = styled.form`
 export const Avatar = styled.div`
   margin: -16rem auto 3.2rem;
   position: relative;
-
-    width: 18.6rem;
-    height: 18.6rem;
 
   > img {
     width: 18.6rem;

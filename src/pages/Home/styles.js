@@ -40,10 +40,10 @@ export const Content = styled.div`
   gap: 2.4rem;
   padding: 0 12rem;
   
-    > div:last-child {
-      margin-bottom: 5.8rem;
-    }
-  `;
+  > div:last-child {
+    margin-bottom: 5.8rem;
+  }
+`;
 
 export const NewNote = styled(Link)`
     display: flex;
