@@ -10,7 +10,7 @@ export function New() {
   return (
     <Container>
       <Header />
-    
+
       <Return />
 
       <main>
@@ -27,12 +27,14 @@ export function New() {
           <h2>Marcadores</h2>
 
           <div className="tags">
+            <NoteItem value="React" />
             <NoteItem value="Astronauta" />
+            <NoteItem value="Tempo" />
             <NoteItem isNew placeholder="Novo marcador" />
           </div>
 
           <section>
-            <Delete>
+            <Delete type="button">
               Excluir filme
             </Delete>
             <Button title="Salvar alterações" />

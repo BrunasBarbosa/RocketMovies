@@ -13,10 +13,6 @@ export const Container = styled.div`
   > main {
    overflow-y: auto;
   }
-
-  > a:nth-child(2){
-    padding: 4.8rem 12.4rem 2.4rem;
-  }
 `;
 
 export const Content = styled.div`
