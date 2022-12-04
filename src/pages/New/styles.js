@@ -13,6 +13,8 @@ export const Container = styled.div`
   > main {
    overflow-y: auto;
   }
+
+  
 `;
 
 export const Content = styled.div`
@@ -25,6 +27,12 @@ export const Content = styled.div`
   gap: 4rem;
   
   padding: 0 12.4rem;
+  
+  input,
+  textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
   
   section {
     display: flex;

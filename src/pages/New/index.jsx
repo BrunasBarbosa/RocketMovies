@@ -28,8 +28,6 @@ export function New() {
 
           <div className="tags">
             <NoteItem value="React" />
-            <NoteItem value="Astronauta" />
-            <NoteItem value="Tempo" />
             <NoteItem isNew placeholder="Novo marcador" />
           </div>
 

@@ -43,6 +43,10 @@ export const Content = styled.div`
   > div:last-child {
     margin-bottom: 5.8rem;
   }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+  }
 `;
 
 export const NewNote = styled(Link)`
