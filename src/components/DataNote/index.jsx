@@ -1,4 +1,5 @@
 import { Container, Title, User, Date } from './styles';
+import TextWithNewlines from "textwithnewlines";
 import { Rate } from '../../components/Rate';
 import { Tag } from '../../components/Tag';
 import { FiClock } from 'react-icons/fi';
@@ -16,7 +17,7 @@ export function DataNote({ data, ...rest }) {
           <img src={data.user_avatar} alt={`Foto de ${data.user_name}`} />
           <span>Por {data.user_name}</span>
         </User>
-        
+
         <Date>
           <FiClock />
           <span>{data.created_at}</span>
@@ -30,7 +31,7 @@ export function DataNote({ data, ...rest }) {
         </footer>
       }
 
-      <p>{data.description}</p>
+    <TextWithNewlines>{data.description}</TextWithNewlines>
     </Container>
   )
 }

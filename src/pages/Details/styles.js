@@ -20,4 +20,5 @@ export const Content = styled.div`
     padding: 0 12.3rem;
     grid-area: content;
     max-width: 155rem;
+    margin-bottom: 15rem;
 `;

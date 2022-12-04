@@ -51,7 +51,7 @@ export const Content = styled.div`
     font-weight: 500;
     line-height: 4.7rem;
       
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.GRAY_000};
   }
 
   .tags {

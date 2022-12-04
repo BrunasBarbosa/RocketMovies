@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.GRAY_000};
 
   footer {
     font-family: 'Roboto', sans-serif;
@@ -13,6 +13,7 @@ export const Container = styled.div`
     margin: 4rem 0;
 
     span {
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
       padding: .8rem 1.6rem;
     }
   }
@@ -38,7 +39,9 @@ export const Container = styled.div`
   }
 
   p {
+    margin-bottom: 2rem;
     font-size: 1.6rem;
+    line-height: 2rem;
     text-align: justify;
   }
 `;

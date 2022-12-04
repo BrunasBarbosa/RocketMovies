@@ -9,10 +9,9 @@ export const Container = styled.div`
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
 
   a {
-
     > h1 {
       font-size: 2.4rem;
-      color: ${({ theme }) => theme.COLORS.WHITE};
+      color: ${({ theme }) => theme.COLORS.GRAY_000};
     }
   
     > p {
@@ -25,7 +24,7 @@ export const Container = styled.div`
       line-height: 1.9rem;
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
-    
+
     > footer {
       display: flex;
       gap: .8rem;
