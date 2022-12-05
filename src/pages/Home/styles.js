@@ -23,7 +23,6 @@ export const Section = styled.div`
   justify-content: space-between;
   padding: 5rem 12rem 4rem;
 
-  width: 100%;
 
   > h1 {
     font-weight: 400;
@@ -35,6 +34,10 @@ export const Section = styled.div`
 
 export const Content = styled.div`
   grid-area: content;
+  max-width: 154.5rem;
+
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   gap: 2.4rem;

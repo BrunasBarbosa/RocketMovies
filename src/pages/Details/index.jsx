@@ -1,3 +1,4 @@
+import { Scrollbar } from '../../components/Scrollbar';
 import { DataNote } from '../../components/DataNote';
 import { Header } from '../../components/Header';
 import { Return } from '../../components/Return';
@@ -11,7 +12,7 @@ export function Details({ data, ...rest }) {
 
       <Return />
 
-      <main>
+      <Scrollbar>
         <Content>
           <DataNote data={{
             title: "Interestelar",
@@ -29,7 +30,7 @@ export function Details({ data, ...rest }) {
             `
           }} />
         </Content>
-      </main>
+      </Scrollbar>
     </Container>
   )
 }

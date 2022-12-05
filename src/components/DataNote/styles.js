@@ -68,7 +68,7 @@ export const User = styled.div`
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
-    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
+    border: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_500};
   }
 `;
 

@@ -1,3 +1,4 @@
+import { Scrollbar } from '../../components/Scrollbar';
 import { Textarea } from '../../components/Textarea';
 import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button';
@@ -13,7 +14,7 @@ export function New() {
 
       <Return />
 
-      <main>
+      <Scrollbar>
         <Content>
           <h1>Novo filme</h1>
 
@@ -38,7 +39,7 @@ export function New() {
             <Button title="Salvar alterações" />
           </section>
         </Content>
-      </main>
+      </Scrollbar>
     </Container>
   )
 }
