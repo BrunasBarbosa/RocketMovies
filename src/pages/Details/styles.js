@@ -17,8 +17,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     margin: 0 auto;
-    padding: 0 12.3rem;
+    width: 100%;
     grid-area: content;
-    max-width: 155rem;
-    margin-bottom: 15rem;
+    padding-right: 1.6rem;
 `;

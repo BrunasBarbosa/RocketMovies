@@ -9,24 +9,16 @@ export const Container = styled.div`
   "header"
   "return"
   "content";
-
-  > main {
-   overflow-y: auto;
-  }
-
-  
 `;
 
 export const Content = styled.div`
-  max-width: 152rem;
-  margin: 0 auto 4rem;
   grid-area: content;
 
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  
-  padding: 0 12.4rem;
+  padding-right: 1.6rem;
+
   
   input,
   textarea {

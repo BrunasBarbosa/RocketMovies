@@ -18,15 +18,15 @@ export function Home() {
       </Section>
 
       <Scrollbar>
-          <Content>
-            <Note data={{
-              title: 'Interestelar',
-              tags: [
-                { id: 1, name: 'Ficção científica' },
-                { id: 2, name: 'Drama' },
-                { id: 3, name: 'Família' },
-              ],
-              description: `Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade 
+        <Content>
+          <Note data={{
+            title: 'Interestelar',
+            tags: [
+              { id: 1, name: 'Ficção científica' },
+              { id: 2, name: 'Drama' },
+              { id: 3, name: 'Família' },
+            ],
+            description: `Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade 
             agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma 
             fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que 
             seu quarto está assombrado por um fantasma que tenta se comunicar com ela. 
@@ -52,16 +52,16 @@ export function Home() {
             raso e agitado por ondas enormes. Uma onda atinge a tripulação enquanto Amelia 
             tenta recuperar os dados de Miller, matando Doyle e atrasando a partida. Ao voltarem 
             para a Endurance, Cooper e Amelia descobrem que 23 anos se passaram.`,
-            }} />
+          }} />
 
-            <Note data={{
-              title: 'Interestelar',
-              tags: [
-                { id: 1, name: 'Ficção científica' },
-                { id: 2, name: 'Drama' },
-                { id: 3, name: 'Família' },
-              ],
-              description: `Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade 
+          <Note data={{
+            title: 'Interestelar',
+            tags: [
+              { id: 1, name: 'Ficção científica' },
+              { id: 2, name: 'Drama' },
+              { id: 3, name: 'Família' },
+            ],
+            description: `Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade 
             agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma 
             fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que 
             seu quarto está assombrado por um fantasma que tenta se comunicar com ela. 
@@ -87,16 +87,16 @@ export function Home() {
             raso e agitado por ondas enormes. Uma onda atinge a tripulação enquanto Amelia 
             tenta recuperar os dados de Miller, matando Doyle e atrasando a partida. Ao voltarem 
             para a Endurance, Cooper e Amelia descobrem que 23 anos se passaram.`,
-            }} />
+          }} />
 
-            <Note data={{
-              title: 'Interestelar',
-              tags: [
-                { id: 1, name: 'Ficção científica' },
-                { id: 2, name: 'Drama' },
-                { id: 3, name: 'Família' },
-              ],
-              description: `Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade 
+          <Note data={{
+            title: 'Interestelar',
+            tags: [
+              { id: 1, name: 'Ficção científica' },
+              { id: 2, name: 'Drama' },
+              { id: 3, name: 'Família' },
+            ],
+            description: `Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade 
             agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma 
             fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que 
             seu quarto está assombrado por um fantasma que tenta se comunicar com ela. 
@@ -122,8 +122,8 @@ export function Home() {
             raso e agitado por ondas enormes. Uma onda atinge a tripulação enquanto Amelia 
             tenta recuperar os dados de Miller, matando Doyle e atrasando a partida. Ao voltarem 
             para a Endurance, Cooper e Amelia descobrem que 23 anos se passaram.`,
-            }} />
-          </Content>
+          }} />
+        </Content>
       </Scrollbar>
     </Container>
   )

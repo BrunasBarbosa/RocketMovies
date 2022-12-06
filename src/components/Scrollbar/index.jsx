@@ -1,11 +1,11 @@
 import { Container } from './styles';
 
-export function Scrollbar({ id, children, ...rest }){
+export function Scrollbar({ children, ...rest }) {
   return (
-    <Container 
-    id="scrollbar"
-    {...rest}>
-      {children}
+    <Container
+      {...rest}
+      >
+        {children}
     </Container>
   )
 };

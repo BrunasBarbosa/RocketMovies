@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
+  overflow-y: auto;
+  width: clamp(54rem,38rem + 60vw,130rem);
+  margin: 0 auto 4rem;
+
   ::-webkit-scrollbar {
     margin-right: 5rem;
     width: .8rem;
@@ -8,6 +12,7 @@ export const Container = styled.main`
 
   ::-webkit-scrollbar-track {
     background-color: transparent;
+    
   }
 
   ::-webkit-scrollbar-thumb {
@@ -15,7 +20,7 @@ export const Container = styled.main`
     background-color: ${({ theme }) => theme.COLORS.SALMON};
   }
 
-  ::-webkit-scrollbar-thum:hover {
+  ::-webkit-scrollbar-thumb:hover {
     filter: brightness(0.9);
   }
 `;

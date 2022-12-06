@@ -11,10 +11,6 @@ export const Container = styled.div`
   "header"
   "label"
   "content";
-
-  > main {
-    overflow-y: auto;
-  }
 `;
 
 export const Section = styled.div`
@@ -22,7 +18,6 @@ export const Section = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 5rem 12rem 4rem;
-
 
   > h1 {
     font-weight: 400;
@@ -34,14 +29,12 @@ export const Section = styled.div`
 
 export const Content = styled.div`
   grid-area: content;
-  max-width: 154.5rem;
-
-  margin: 0 auto;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  padding: 0 12rem;
+  padding-right: .8rem;
   
   > div:last-child {
     margin-bottom: 5.8rem;
