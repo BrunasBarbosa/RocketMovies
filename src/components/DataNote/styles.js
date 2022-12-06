@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
+  
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.COLORS.GRAY_000};
 
   footer {
     font-family: 'Roboto', sans-serif;
+
     display: flex;
     gap: .8rem;
     margin: 4rem 0;
@@ -48,12 +50,13 @@ export const Container = styled.div`
 
 export const Title = styled.div`
   height: 4.7rem;
+  margin-bottom: 2.4rem;
+
   display: flex;
   align-items: center;
   gap: 1.9rem;
-  margin-bottom: 2.4rem;
 
-svg {
+  svg {
     width: 2rem;
     height: 2rem;
   }
@@ -67,6 +70,7 @@ export const User = styled.div`
   > img {
     width: 1.6rem;
     height: 1.6rem;
+
     border-radius: 50%;
     border: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_500};
   }

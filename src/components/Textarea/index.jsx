@@ -6,4 +6,4 @@ export function Textarea({ value, ...rest }) {
       {value}
     </Container>
   )
-}
+};

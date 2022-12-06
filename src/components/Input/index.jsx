@@ -7,4 +7,4 @@ export function Input({ icon: Icon, ...rest }) {
       <input {...rest} />
     </Container>
   )
-}
+};

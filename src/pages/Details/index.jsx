@@ -5,7 +5,6 @@ import { Return } from '../../components/Return';
 import { Container, Content } from './styles';
 
 export function Details({ data, ...rest }) {
-
   return (
     <Container {...rest}>
       <Header />
@@ -33,4 +32,4 @@ export function Details({ data, ...rest }) {
       </Scrollbar>
     </Container>
   )
-}
+};

@@ -12,5 +12,4 @@ export const Container = styled.textarea`
   border-radius: 1rem;
   border: none;
   resize: none;
-
 `;

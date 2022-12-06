@@ -25,4 +25,4 @@ export function Header() {
       </Profile>
     </Container>
   )
-}
+};

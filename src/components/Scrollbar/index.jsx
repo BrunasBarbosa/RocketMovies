@@ -4,8 +4,8 @@ export function Scrollbar({ children, ...rest }) {
   return (
     <Container
       {...rest}
-      >
-        {children}
+    >
+      {children}
     </Container>
   )
 };

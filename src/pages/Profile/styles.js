@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
+  width: 100%;
 
   > header {
-    display: flex;
     width: 100%;
     height: 14.4rem;
     padding: 0 14.4rem;
 
+    
     align-items: center;
+
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   }
 `;
@@ -17,15 +18,13 @@ export const Container = styled.div`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+
   max-width: 34rem;
   margin: 6.4rem auto;
   gap: .8rem;
 
-  > div:nth-child(4) {
-    margin-top: 1.6rem;
-  }
-
-  > button {
+  > div:nth-child(4),
+  button {
     margin-top: 1.6rem;
   }
 `;
@@ -65,6 +64,7 @@ export const Avatar = styled.div`
     svg {
       width: 2rem;
       height: 2rem;
+
       color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
     }
   }

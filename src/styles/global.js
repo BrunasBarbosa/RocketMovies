@@ -46,4 +46,4 @@ export default createGlobalStyle`
   a:hover {
     filter: brightness(0.9);
   }
-`
+`;

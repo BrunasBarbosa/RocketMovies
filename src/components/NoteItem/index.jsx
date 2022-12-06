@@ -25,4 +25,4 @@ export function NoteItem({ isNew, value, onClick, style, placeholder, onChange, 
       </button>
     </Container>
   )
-}
+};

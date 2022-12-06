@@ -5,7 +5,7 @@ export function Return() {
   return (
     <Container to="/" >
       <FiArrowLeft />
-          Voltar
+      Voltar
     </Container>
   )
-}
+};

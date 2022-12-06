@@ -15,4 +15,4 @@ export default {
     WHITE: "#FFFFFF",
     SALMON: "#FF859B",
   }
-}
+};

@@ -7,13 +7,14 @@ export const Container = styled.div`
   padding: 1.6rem;
 
   border-radius: 1rem;
+  border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : 'none' };
 
   background-color: ${({ theme, isNew }) => isNew ? 'transparent' : theme.COLORS.BACKGROUND_700};
-  border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : 'none' };
   
   > button {
     width: 2.2rem;
     height: 2.2rem;
+    
     border: none;
     background: none;
     color: ${({ theme }) => theme.COLORS.SALMON};
@@ -25,12 +26,14 @@ export const Container = styled.div`
   }
 
   > input {
+    width: 100%;
+
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
     border: none;
-    width: 100%;
 
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};

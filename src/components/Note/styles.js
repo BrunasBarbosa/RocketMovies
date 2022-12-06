@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  padding: 3.2rem;
   height: 22.2rem;
+  padding: 3.2rem;
+
   border-radius: 1.6rem;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
@@ -15,20 +16,22 @@ export const Container = styled.div`
     }
   
     > p {
+      height: 5.2rem;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
-      height: 5.2rem;
-      text-align: justify;
+
       font-size: 1.6rem;
+      text-overflow: ellipsis;
+      text-align: justify;
       line-height: 1.9rem;
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 
     > footer {
+      margin: 1.5rem 0 3.2rem;
+      
       display: flex;
       gap: .8rem;
-      margin: 1.5rem 0 3.2rem;
     }
   }
 

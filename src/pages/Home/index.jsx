@@ -127,4 +127,4 @@ export function Home() {
       </Scrollbar>
     </Container>
   )
-}
+};

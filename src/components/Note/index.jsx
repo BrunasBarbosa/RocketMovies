@@ -3,7 +3,6 @@ import { Container } from './styles';
 import { Rate } from '../Rate';
 import { Tag } from '../Tag';
 
-
 export function Note({ data, ...rest }) {
   return (
     <Container  {...rest}>
@@ -22,4 +21,4 @@ export function Note({ data, ...rest }) {
       </Link>
     </Container>
   )
-}
+};

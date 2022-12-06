@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/global';
-import { Routes } from './routes';
+import ReactDOM from 'react-dom/client';
 import theme from './styles/theme';
+import { Routes } from './routes';
+import React from 'react';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,4 +13,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes />
     </ThemeProvider>
   </React.StrictMode>
-)
+);

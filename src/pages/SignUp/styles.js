@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import backgroundImg from '../../assets/background.png';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100vh;
@@ -49,14 +49,16 @@ export const Form = styled.form`
 
   > a {
     margin-top: 4.2rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
      svg {
-      margin-right: .8rem;
-      width: 2rem;
-      height: 2rem;
+       width: 2rem;
+       height: 2rem;
+       margin-right: .8rem;
+
       color: ${({ theme }) => theme.COLORS.SALMON};
       }
   }

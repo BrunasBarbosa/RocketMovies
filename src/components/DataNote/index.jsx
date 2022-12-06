@@ -31,7 +31,7 @@ export function DataNote({ data, ...rest }) {
         </footer>
       }
 
-    <TextWithNewlines>{data.description}</TextWithNewlines>
+      <TextWithNewlines>{data.description}</TextWithNewlines>
     </Container>
   )
-}
+};
