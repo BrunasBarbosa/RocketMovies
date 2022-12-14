@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi';
 import { Container } from './styles';
 
-export function Return({ onClick, ...rest }) {
+export function Return() {
   const navigate = useNavigate();
   
   function handleBack(){
@@ -10,10 +10,7 @@ export function Return({ onClick, ...rest }) {
   }
   
   return (
-    <Container
-      onClick={handleBack}
-      {...rest}
-    >
+    <Container onClick={handleBack}>
       <FiArrowLeft />
       Voltar
     </Container>
