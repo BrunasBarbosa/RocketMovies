@@ -3,13 +3,12 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Container } from './styles';
 
 export function Return({ onClick, ...rest }) {
-
   const navigate = useNavigate();
-
-  function handleBack() {
+  
+  function handleBack(){
     navigate(-1);
   }
-
+  
   return (
     <Container
       onClick={handleBack}
