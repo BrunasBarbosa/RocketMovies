@@ -61,7 +61,7 @@ export function SignUp() {
           icon={FiLock}
           onChange={e => setPassword(e.target.value)}
         />
-        <Button title="Cadastrar" onClick={handleSignUp}/>
+        <Button title="Cadastrar" onClick={handleSignUp} />
 
         <Link to="/">
           <FiArrowLeft />
