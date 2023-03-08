@@ -1,14 +1,14 @@
 import { createContext, useContext } from 'react';
 
-export const AuthContext = createContext();
+export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
   return (
-    <AuthContext.Provider>
+    <AuthContext.Provider value={{}}>
       {children}
     </AuthContext.Provider>
   );
-}
+};
 
 function useAuth() {
   const context = useContext(AuthContext);
@@ -16,4 +16,4 @@ function useAuth() {
   return context;
 }
 
-export { AuthProvider, useAuth };
+export { AuthProvider, useAuth }
