@@ -3,31 +3,20 @@ import { Container, Background, Form } from './styles';
 import { Button } from '../../components/Button';
 import { FiMail, FiLock } from 'react-icons/fi';
 import { Input } from '../../components/Input';
+import { useAuth } from '../../hooks/auth';
 import { Link } from 'react-router-dom';
-import { api } from '../../services/api';
 import { useState } from 'react';
 
 export function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const { signIn } = useAuth();
+
   function handleSignIn() {
-    if (!email || !password) {
-      return alert('Preencha todos os campos.');
-    }
+    signIn({ email, password });
+  };
 
-    api.post('/sessions', { email, password })
-      .then(() => {
-
-      })
-      .catch(error => {
-        if (error.response) {
-          return alert(error.response.data.message);
-        } else {
-          return alert('Não foi possível entrar.');
-        }
-      });
-  }
   return (
     <Container>
       <Form>
