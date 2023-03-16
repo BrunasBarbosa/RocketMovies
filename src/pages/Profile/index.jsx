@@ -3,8 +3,33 @@ import { Container, Form, Avatar } from './styles';
 import { Button } from '../../components/Button';
 import { Return } from '../../components/Return';
 import { Input } from '../../components/Input';
+import { useAuth } from '../../hooks/auth';
+import { useState } from 'react';
 
 export function Profile() {
+  const { user, updateProfile } = useAuth();
+  const [name, setName] = useState(user.name);
+  const [email, setEmail] = useState(user.email);
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmedPassword, setConfirmedPassword] = useState('');
+
+  async function handleUpdate() {
+    const user = {
+      name,
+      email,
+      old_password: oldPassword,
+      password: newPassword,
+      confirm_password: confirmedPassword
+    }
+
+    setOldPassword('');
+    setNewPassword('');
+    setConfirmedPassword('');
+
+    await updateProfile({ user });
+  }
+
   return (
     <Container>
       <header>
@@ -32,34 +57,44 @@ export function Profile() {
           placeholder="Nome"
           icon={FiUser}
           type="text"
+          value={name}
+          onChange={e => setName(e.target.value)}
         />
 
         <Input
           placeholder="E-mail"
           icon={FiMail}
           type="text"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
         />
 
         <Input
           placeholder="Senha atual"
           icon={FiLock}
           type="password"
+          value={oldPassword}
+          onChange={e => setOldPassword(e.target.value)}
         />
 
         <Input
           placeholder="Nova senha"
           icon={FiLock}
           type="password"
+          value={newPassword}
+          onChange={e => setNewPassword(e.target.value)}
         />
 
         <Input
           placeholder="Confirme a senha"
           icon={FiLock}
           type="password"
+          value={confirmedPassword}
+          onChange={e => setConfirmedPassword(e.target.value)}
         />
 
-        <Button title="Salvar" />
+        <Button title="Salvar" onClick={handleUpdate} />
       </Form>
     </Container>
-  )
+  );
 };
