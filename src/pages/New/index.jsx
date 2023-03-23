@@ -6,8 +6,21 @@ import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Return } from '../../components/Return';
 import { Input } from '../../components/Input';
+import { useState } from 'react';
 
 export function New() {
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState('');
+
+  function handleAddTag() {
+    setTags(prevState => [...prevState, newTag]);
+    setNewTag('');
+  }
+
+  function handleRemoveTag(deleted) {
+    setTags(prevState => prevState.filter(tag => tag !== deleted));
+  }
+
   return (
     <Container>
       <Header />
@@ -28,8 +41,21 @@ export function New() {
           <h2>Marcadores</h2>
 
           <div className="tags">
-            <NoteItem value="React" />
-            <NoteItem isNew placeholder="Novo marcador" />
+            <NoteItem 
+              isNew 
+              placeholder="Novo marcador"
+              onChange={e => setNewTag(e.target.value)}
+              value={newTag}
+              onClick={handleAddTag}
+            />
+            {
+              tags.map((tag, index) => 
+                <NoteItem 
+                  key={String(index)}
+                  value={tag}
+                  onClick={() => handleRemoveTag(tag)}
+                />)
+            }
           </div>
 
           <section>
@@ -41,5 +67,5 @@ export function New() {
         </Content>
       </Scrollbar>
     </Container>
-  )
+  );
 };
