@@ -51,6 +51,7 @@ export const Profile = styled.div`
       
       border: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_500};
       border-radius: 50%;
+      object-fit: cover;
     }
   } 
 `;
