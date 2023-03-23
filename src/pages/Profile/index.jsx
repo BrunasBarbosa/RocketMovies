@@ -1,5 +1,5 @@
-import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 import { FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 import { Container, Form, Avatar } from './styles';
 import { Button } from '../../components/Button';
 import { Return } from '../../components/Return';
@@ -17,7 +17,7 @@ export function Profile() {
   const [newPassword, setNewPassword] = useState('');
   const [confirmedPassword, setConfirmedPassword] = useState('');
 
-  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files${user.avatar}` : avatarPlaceholder;
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
   const [avatar, setAvatar] = useState(avatarURL);
   const [avatarFile, setAvatarFile] = useState(null);
 

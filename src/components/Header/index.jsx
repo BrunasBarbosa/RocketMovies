@@ -12,7 +12,7 @@ export function Header() {
   const { signOut, user } = useAuth();
   const navigate = useNavigate();
   
-  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files${user.avatar}` : avatarPlaceholder;
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
 
   function handleSignOut() {
     navigate('/');
