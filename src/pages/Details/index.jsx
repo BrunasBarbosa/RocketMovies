@@ -3,8 +3,13 @@ import { DataNote } from '../../components/DataNote';
 import { Header } from '../../components/Header';
 import { Return } from '../../components/Return';
 import { Container, Content } from './styles';
+import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
 
 export function Details({ data, ...rest }) {
+  const { user } = useAuth();
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
+
   return (
     <Container {...rest}>
       <Header />
@@ -15,8 +20,8 @@ export function Details({ data, ...rest }) {
         <Content>
           <DataNote data={{
             title: "Interestelar",
-            user_avatar: "https://github.com/brunasbarbosa.png",
-            user_name: "Bruna Barbosa",
+            user_avatar: avatarURL,
+            user_name: user.name,
             created_at: "23/05/22 às 08:00",
             tags: [
               { id: 1, name: 'Ficção científica' },
