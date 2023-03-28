@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Container } from './styles';
 import { Rate } from '../Rate';
 import { Tag } from '../Tag';
@@ -6,7 +5,7 @@ import { Tag } from '../Tag';
 export function Note({ data, ...rest }) {
   return (
     <Container  {...rest}>
-      <Link to="/details/:id">
+      <div>
         <h1>{data.title}</h1>
         <Rate />
         <p>
@@ -18,7 +17,7 @@ export function Note({ data, ...rest }) {
             {data.tags.map(tag => <Tag key={tag.id} title={tag.name} />)}
           </footer>
         }
-      </Link>
+      </div>
     </Container>
-  )
+  );
 };

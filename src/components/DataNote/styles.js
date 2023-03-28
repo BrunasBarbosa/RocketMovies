@@ -21,6 +21,7 @@ export const Container = styled.div`
   }
 
   h1 {
+    white-space: nowrap;
     font-size: 3.6rem;
     font-weight: 500;
   }

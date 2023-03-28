@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
 
-  a {
+  div {
     > h1 {
       font-size: 2.4rem;
       color: ${({ theme }) => theme.COLORS.GRAY_000};
