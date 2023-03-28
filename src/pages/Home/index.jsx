@@ -1,6 +1,7 @@
 import { Container, Content, Section, NewNote } from './styles';
 import { Scrollbar } from '../../components/Scrollbar';
 import { Header } from '../../components/Header';
+import { useNavigate } from 'react-router-dom';
 import { Note } from '../../components/Note';
 import { useState, useEffect } from 'react';
 import { api } from '../../services/api';
@@ -8,6 +9,12 @@ import { FiPlus } from 'react-icons/fi';
 
 export function Home() {
   const [notes, setnotes] = useState([]);
+
+  const navigate = useNavigate();
+
+  function handleDetails(id) {
+    return navigate(`/details/${id}`)
+  }
 
   async function fetchNotes(title) {
     const response = await api.get(`/notes?title=${title}`);
@@ -38,7 +45,7 @@ export function Home() {
               <Note
                 key={String(movie.id)}
                 data={movie}
-                onClick={() => { }}
+                onClick={() => handleDetails(movie.id)}
               />
             )
           }
