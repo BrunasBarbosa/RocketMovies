@@ -1,5 +1,5 @@
 import { Scrollbar } from '../../components/Scrollbar';
-import { Container, Delete, Content } from './styles';
+import { ButtonDelete } from '../../components/ButtonDelete';
 import { Textarea } from '../../components/Textarea';
 import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button';
@@ -7,6 +7,7 @@ import { Header } from '../../components/Header';
 import { Return } from '../../components/Return';
 import { Input } from '../../components/Input';
 import { useNavigate } from 'react-router-dom';
+import { Container, Content } from './styles';
 import { api } from '../../services/api';
 import { useState } from 'react';
 
@@ -95,9 +96,7 @@ export function New() {
           </div>
 
           <section>
-            <Delete type="button">
-              Excluir filme
-            </Delete>
+            <ButtonDelete type="button" title={'Excluir filme'} />
             <Button title="Salvar alterações" onClick={handleNewNote} />
           </section>
         </Content>
