@@ -7,11 +7,11 @@ import { api } from '../../services/api';
 import { Link } from 'react-router-dom';
 import { Input } from '../Input';
 
-export function Header() {
-  
+export function Header({ fetch }) {
   const { signOut, user } = useAuth();
+
   const navigate = useNavigate();
-  
+
   const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
 
   function handleSignOut() {
@@ -23,7 +23,10 @@ export function Header() {
     <Container>
       <h2>RocketMovies</h2>
 
-      <Input placeholder="Pesquisar pelo título" />
+      <Input
+        placeholder="Pesquisar pelo título"
+        onChange={e => { fetch(e.target.value) }}
+      />
 
       <Profile>
         <div>
