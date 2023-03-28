@@ -1,21 +1,34 @@
+import { ButtonDelete } from '../../components/ButtonDelete';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Scrollbar } from '../../components/Scrollbar';
 import { DataNote } from '../../components/DataNote';
 import { Header } from '../../components/Header';
 import { Return } from '../../components/Return';
 import { Container, Content } from './styles';
-import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
-import { ButtonDelete } from '../../components/ButtonDelete';
 import { Button } from '../../components/Button';
 
 export function Details({ ...rest }) {
   const params = useParams();
+
+  const navigate = useNavigate();
+
   const [data, setData] = useState(null);
 
   const { user } = useAuth();
+
   const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
+
+  async function handleDelete() {
+    const confirm = window.confirm('Deseja realmente excluir a nota?');
+
+    if (confirm) {
+      await api.delete(`/notes/${params.id}`);
+      navigate(-1);
+    }
+  }
 
   useEffect(() => {
     async function fetchNote() {
@@ -47,7 +60,7 @@ export function Details({ ...rest }) {
         </Content>
       </Scrollbar>
       <section>
-        <ButtonDelete title='Excluir' />
+        <ButtonDelete title='Excluir' onClick={handleDelete}/>
         <Button title='Editar' />
       </section>
     </Container>

@@ -1,5 +1,5 @@
-import { Scrollbar } from '../../components/Scrollbar';
 import { ButtonDelete } from '../../components/ButtonDelete';
+import { Scrollbar } from '../../components/Scrollbar';
 import { Textarea } from '../../components/Textarea';
 import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button';
@@ -22,7 +22,7 @@ export function New() {
   const navigate = useNavigate();
 
   function handleBack() {
-    return  navigate(-1);
+    return navigate(-1);
   }
 
   function handleAddTag() {
@@ -101,7 +101,7 @@ export function New() {
           </div>
 
           <section>
-            <ButtonDelete title='Cancelar' onClick={handleBack}/>
+            <ButtonDelete title='Cancelar' onClick={handleBack} />
             <Button title='Salvar alterações' onClick={handleNewNote} />
           </section>
         </Content>
