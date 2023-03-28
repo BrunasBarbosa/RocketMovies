@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
+import { ButtonDelete } from '../../components/ButtonDelete';
+import { Button } from '../../components/Button';
 
 export function Details({ ...rest }) {
   const params = useParams();
@@ -44,6 +46,10 @@ export function Details({ ...rest }) {
             }} />}
         </Content>
       </Scrollbar>
+      <section>
+        <ButtonDelete title='Excluir' />
+        <Button title='Editar' />
+      </section>
     </Container>
   );
 };

@@ -14,6 +14,15 @@ export const Container = styled.div`
   main {
     overflow-y: auto;
   }
+
+  section {
+    width: clamp(54rem,38rem + 60vw,130rem);
+    padding: 1.6rem;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 4rem;
+  }
 `;
 
 export const Content = styled.div`

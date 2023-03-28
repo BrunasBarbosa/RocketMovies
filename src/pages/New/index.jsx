@@ -20,6 +20,11 @@ export function New() {
   const [description, setDescription] = useState('');
 
   const navigate = useNavigate();
+
+  function handleBack() {
+    return  navigate(-1);
+  }
+
   function handleAddTag() {
     setTags(prevState => [...prevState, newTag]);
     setNewTag('');
@@ -46,7 +51,7 @@ export function New() {
     });
 
     alert('Nota cadastrada com sucesso.');
-    navigate(-1);
+    handleBack();
   }
 
   return (
@@ -96,8 +101,8 @@ export function New() {
           </div>
 
           <section>
-            <ButtonDelete type="button" title={'Excluir filme'} />
-            <Button title="Salvar alterações" onClick={handleNewNote} />
+            <ButtonDelete title='Cancelar' onClick={handleBack}/>
+            <Button title='Salvar alterações' onClick={handleNewNote} />
           </section>
         </Content>
       </Scrollbar>
