@@ -12,15 +12,22 @@ import { api } from '../../services/api';
 import { useState } from 'react';
 
 export function Update() {
-  const params = useParams();
-  const [tags, setTags] = useState([]);
-  const [newTag, setNewTag] = useState('');
+  const data = localStorage.getItem('@moviesnotes:note');
+  const note = JSON.parse(data);
 
-  const [title, setTitle] = useState('');
-  const [rate, setRate] = useState('');
-  const [description, setDescription] = useState('');
+  const prevTags = note.tags.map((tag) => tag.name);
+
+  const params = useParams();
 
   const navigate = useNavigate();
+
+  const [tags, setTags] = useState(prevTags ?? []);
+  const [newTag, setNewTag] = useState('');
+
+  const [title, setTitle] = useState(note.title);
+  const [rate, setRate] = useState(note.rating);
+  const [description, setDescription] = useState(note.description);
+
 
   function handleBack() {
     return navigate(-1);
@@ -51,68 +58,72 @@ export function Update() {
       alert('Nota atualizada com sucesso.');
       handleBack();
 
-    } catch (error ) {
-      
+    } catch (error) {
+
       if (error.response) {
         alert(error.response.data.message);
       } else {
         alert('Não foi possível atualizar os dados.');
       }
-    }}
+    }
+  }
 
 
-    return (
-      <Container>
-        <Header />
+  return (
+    <Container>
+      <Header />
 
-        <Return />
+      <Return />
 
-        <Scrollbar>
-          <Content>
-            <h1>Novo filme</h1>
+      <Scrollbar>
+        <Content>
+          <h1>Novo filme</h1>
 
-            <section>
-              <Input
-                placeholder="Título"
-                onChange={e => setTitle(e.target.value)}
-              />
-              <Input
-                placeholder="Sua nota(de 0 a 5)"
-                onChange={e => setRate(e.target.value)}
-              />
-            </section>
-
-            <Textarea
-              placeholder="Observações"
-              onChange={e => setDescription(e.target.value)}
+          <section>
+            <Input
+              placeholder="Título"
+              value={title}
+              onChange={e => setTitle(e.target.value)}
             />
+            <Input
+              placeholder="Sua nota(de 0 a 5)"
+              value={rate}
+              onChange={e => setRate(e.target.value)}
+            />
+          </section>
 
-            <h2>Marcadores</h2>
+          <Textarea
+            placeholder="Observações"
+            defaultValue={description}
+            onChange={e => setDescription(e.target.value)}
+          />
 
-            <div className="tags">
-              <NoteItem
-                isNew
-                placeholder="Novo marcador"
-                onChange={e => setNewTag(e.target.value)}
-                value={newTag}
-                onClick={handleAddTag}
-              />
-              {
-                tags.map((tag, index) =>
-                  <NoteItem
-                    key={String(index)}
-                    value={tag}
-                    onClick={() => handleRemoveTag(tag)}
-                  />)
-              }
-            </div>
+          <h2>Marcadores</h2>
 
-            <section>
-              <ButtonDelete title='Cancelar' onClick={handleBack} />
-              <Button title='Salvar alterações' onClick={handleUpdateNote} />
-            </section>
-          </Content>
-        </Scrollbar>
-      </Container>
-    );
-  };
+          <div className="tags">
+            <NoteItem
+              isNew
+              placeholder="Novo marcador"
+              onChange={e => setNewTag(e.target.value)}
+              value={newTag}
+              onClick={handleAddTag}
+            />
+            {
+              tags.map((tag, index) =>
+                <NoteItem
+                  key={String(index)}
+                  value={tag}
+                  onClick={() => handleRemoveTag(tag)}
+                />)
+            }
+          </div>
+
+          <section>
+            <ButtonDelete title='Cancelar' onClick={handleBack} />
+            <Button title='Salvar alterações' onClick={handleUpdateNote} />
+          </section>
+        </Content>
+      </Scrollbar>
+    </Container>
+  );
+};

@@ -31,12 +31,15 @@ export function Details({ ...rest }) {
   }
 
   function handleDetails() {
-    return navigate(`/notes/${params.id}`)
+    return navigate(`/notes/${params.id}`);
   }
 
   useEffect(() => {
     async function fetchNote() {
       const response = await api.get(`/notes/${params.id}`);
+
+      localStorage.setItem('@moviesnotes:note', JSON.stringify(response.data));
+
       setData(response.data);
     }
 
@@ -64,8 +67,8 @@ export function Details({ ...rest }) {
         </Content>
       </Scrollbar>
       <section>
-        <ButtonDelete title='Excluir' onClick={handleDelete}/>
-        <Button title='Editar' onClick={handleDetails}/>
+        <ButtonDelete title='Excluir' onClick={handleDelete} />
+        <Button title='Editar' onClick={handleDetails} />
       </section>
     </Container>
   );
