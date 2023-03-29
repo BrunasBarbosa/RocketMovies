@@ -22,12 +22,16 @@ export function Details({ ...rest }) {
   const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
 
   async function handleDelete() {
-    const confirm = window.confirm('Deseja realmente excluir a nota?');
+    const confirm = window.confirm('Você realmente deseja excluir a nota?');
 
     if (confirm) {
       await api.delete(`/notes/${params.id}`);
       navigate(-1);
     }
+  }
+
+  function handleDetails() {
+    return navigate(`/notes/${params.id}`)
   }
 
   useEffect(() => {
@@ -61,7 +65,7 @@ export function Details({ ...rest }) {
       </Scrollbar>
       <section>
         <ButtonDelete title='Excluir' onClick={handleDelete}/>
-        <Button title='Editar' />
+        <Button title='Editar' onClick={handleDetails}/>
       </section>
     </Container>
   );
