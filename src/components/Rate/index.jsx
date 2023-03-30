@@ -15,7 +15,7 @@ export function Rate({ rate = 0 }) {
 
   return (
     <Container >
-      <div className='stars-outer'>
+      <div>
         {starsOuter}
       </div>
 
