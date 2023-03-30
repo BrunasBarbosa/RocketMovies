@@ -6,9 +6,10 @@ import { Note } from '../../components/Note';
 import { useState, useEffect } from 'react';
 import { api } from '../../services/api';
 import { FiPlus } from 'react-icons/fi';
+import { EmptyData } from '../../components/EmptyData';
 
 export function Home() {
-  const [notes, setnotes] = useState([]);
+  const [notes, setNotes] = useState([]);
 
   const navigate = useNavigate();
 
@@ -16,19 +17,18 @@ export function Home() {
     return navigate(`/details/${id}`);
   }
 
-  function clearDataNoteLocal() {
+  function clearNoteDataLocal() {
     return localStorage.removeItem('@moviesnotes:note');
   }
 
   async function fetchNotes(title) {
     const response = await api.get(`/notes?title=${title}`);
-    setnotes(response.data);
+    setNotes(response.data);
   }
 
   useEffect(() => {
-    const response = fetchNotes(notes);
-    setnotes(response.data);
-    clearDataNoteLocal();
+    fetchNotes(notes);
+    clearNoteDataLocal();
   }, []);
 
   return (
@@ -45,14 +45,17 @@ export function Home() {
 
       <Scrollbar>
         <Content>
-          {notes &&
-            notes.map((movie) =>
-              <Note
-                key={String(movie.id)}
-                data={movie}
-                onClick={() => handleDetails(movie.id)}
-              />
-            )
+          {
+            notes.length > 0 ?
+              notes.map((movie) => (
+                <Note
+                  key={String(movie.id)}
+                  data={movie}
+                  onClick={() => handleDetails(movie.id)}
+                />
+              ))
+              :
+              <EmptyData />
           }
         </Content>
       </Scrollbar>

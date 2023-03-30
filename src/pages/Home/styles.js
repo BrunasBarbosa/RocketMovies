@@ -36,13 +36,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-
-  > div:hover {
-    cursor: pointer;
-    filter: brightness(90%);
-    transition: all .5s ease-in-out;
-  }
-
+  
   > div:last-child {
     margin-bottom: 5.8rem;
   }

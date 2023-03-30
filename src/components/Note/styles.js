@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  
   width: 100%;
   height: 22.2rem;
   padding: 3.2rem;
@@ -9,6 +10,12 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.5);
 
+  > div:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: all .5s ease-in-out;
+  }
+  
   div {
     > h1 {
       font-size: 2.4rem;

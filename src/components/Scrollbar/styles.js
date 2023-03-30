@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
+  padding: 0 12.4rem 0;
   overflow-y: auto;
   width: clamp(54rem,38rem + 60vw,130rem);
   margin: 0 auto 4rem;
