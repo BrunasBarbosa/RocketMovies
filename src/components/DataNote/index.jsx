@@ -3,13 +3,12 @@ import TextWithNewlines from "textwithnewlines";
 import { Rate } from '../../components/Rate';
 import { Tag } from '../../components/Tag';
 import { FiClock } from 'react-icons/fi';
-
 export function DataNote({ data, ...rest }) {
   return (
     <Container {...rest}>
       <Title>
         <h1>{data.title}</h1>
-        <Rate />
+        <Rate rate={data.rating} />
       </Title>
 
       <div className="details">
@@ -33,5 +32,5 @@ export function DataNote({ data, ...rest }) {
 
       <TextWithNewlines>{data.description}</TextWithNewlines>
     </Container>
-  )
+  );
 };

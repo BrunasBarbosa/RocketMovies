@@ -58,6 +58,7 @@ export function Details({ ...rest }) {
             data &&
             <DataNote data={{
               title: data.title,
+              rating: data.rating,
               user_avatar: avatarURL,
               user_name: user.name,
               created_at: data.created_at,

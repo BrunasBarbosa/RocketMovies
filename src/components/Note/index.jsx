@@ -7,7 +7,7 @@ export function Note({ data, ...rest }) {
     <Container  {...rest}>
       <div>
         <h1>{data.title}</h1>
-        <Rate />
+        <Rate rate={data.rating}/>
         <p>
           {data.description}
         </p>
