@@ -11,8 +11,9 @@ export const Container = styled.div`
   display: flex;
   
   align-items: center;
-
+  
   p {
+    text-align: center;
     font-size: 3.2rem;
     color: ${({ theme }) => theme.COLORS.BACKGROUND_500};
     font-family: 'Roboto Slab', serif;
