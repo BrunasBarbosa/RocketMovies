@@ -21,25 +21,24 @@ export const Container = styled.div`
       font-size: 2.4rem;
       color: ${({ theme }) => theme.COLORS.GRAY_000};
     }
-  
+    
     > p {
       height: 5.2rem;
       white-space: nowrap;
       overflow: hidden;
-
+      
       font-size: 1.6rem;
       text-overflow: ellipsis;
       text-align: justify;
       line-height: 1.9rem;
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
-
-    > footer {
+  }
+  
+  footer {
       margin: 1.5rem 0 3.2rem;
-      
       display: flex;
       gap: .8rem;
-    }
   }
 
   svg {

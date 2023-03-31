@@ -1,7 +1,6 @@
 import { Container, Content, Section, NewNote } from './styles';
 import { Scrollbar } from '../../components/Scrollbar';
 import { Header } from '../../components/Header';
-import { useNavigate } from 'react-router-dom';
 import { Note } from '../../components/Note';
 import { useState, useEffect } from 'react';
 import { api } from '../../services/api';
@@ -10,24 +9,20 @@ import { EmptyData } from '../../components/EmptyData';
 
 export function Home() {
   const [notes, setNotes] = useState([]);
-
-  const navigate = useNavigate();
-
-  function handleDetails(id) {
-    return navigate(`/details/${id}`);
-  }
+  const [tagsSelected, setTagsSelected] = useState([]);
 
   function clearNoteDataLocal() {
     return localStorage.removeItem('@moviesnotes:note');
   }
 
-  async function fetchNotes(title) {
-    const response = await api.get(`/notes?title=${title}`);
+  async function fetchNotes(title, tag) {
+    const response = await api.get(`/notes?title=${title}&tag=${tag}`);
     setNotes(response.data);
+    setTagsSelected(tag);
   }
 
   useEffect(() => {
-    fetchNotes(notes);
+    fetchNotes(notes, tagsSelected);
     clearNoteDataLocal();
   }, []);
 
@@ -49,9 +44,9 @@ export function Home() {
             notes.length > 0 ?
               notes.map((movie) => (
                 <Note
+                  fetch={fetchNotes}
                   key={String(movie.id)}
                   data={movie}
-                  onClick={() => handleDetails(movie.id)}
                 />
               ))
               :

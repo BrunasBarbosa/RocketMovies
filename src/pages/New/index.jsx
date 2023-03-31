@@ -102,7 +102,7 @@ export function New() {
 
           <section>
             <ButtonDelete title='Cancelar' onClick={handleBack} />
-            <Button title='Salvar alterações' onClick={handleNewNote} />
+            <Button title='Salvar' onClick={handleNewNote} />
           </section>
         </Content>
       </Scrollbar>

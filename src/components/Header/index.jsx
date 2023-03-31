@@ -25,7 +25,7 @@ export function Header({ fetch }) {
 
       <Input
         placeholder="Pesquisar pelo título"
-        onChange={e => { fetch(e.target.value) }}
+        onChange={e => { fetch(e.target.value, []) }}
       />
 
       <Profile>
