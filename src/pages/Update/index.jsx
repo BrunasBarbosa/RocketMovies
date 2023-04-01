@@ -13,13 +13,10 @@ import { useState } from 'react';
 
 export function Update() {
   const data = localStorage.getItem('@moviesnotes:note');
+
   const note = JSON.parse(data);
 
   const prevTags = note.tags.map((tag) => tag.name);
-
-  const params = useParams();
-
-  const navigate = useNavigate();
 
   const [tags, setTags] = useState(prevTags ?? []);
   const [newTag, setNewTag] = useState('');
@@ -28,6 +25,9 @@ export function Update() {
   const [rate, setRate] = useState(note.rating);
   const [description, setDescription] = useState(note.description);
 
+  const params = useParams();
+
+  const navigate = useNavigate();
 
   function handleBack() {
     return navigate(-1);
@@ -67,7 +67,6 @@ export function Update() {
       }
     }
   }
-
 
   return (
     <Container>

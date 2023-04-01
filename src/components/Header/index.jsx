@@ -7,12 +7,14 @@ import { api } from '../../services/api';
 import { Link } from 'react-router-dom';
 import { Input } from '../Input';
 
-export function Header({ fetch }) {
+export function Header({ fetch, readOnly }) {
   const { signOut, user } = useAuth();
 
   const navigate = useNavigate();
 
   const avatarURL = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarPlaceholder;
+
+  const isHome = window.location.pathname == '/';
 
   function handleSignOut() {
     navigate('/');
@@ -24,8 +26,9 @@ export function Header({ fetch }) {
       <h2>RocketMovies</h2>
 
       <Input
+        readOnly={!isHome}
         placeholder="Pesquisar pelo título"
-        onChange={e => { fetch(e.target.value, []) }}
+        onChange={e => { fetch(e.target.value, []); }}
       />
 
       <Profile>

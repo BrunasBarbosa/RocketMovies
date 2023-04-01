@@ -16,8 +16,9 @@ export function Home() {
   }
 
   async function fetchNotes(title, tag) {
-    const response = await api.get(`/notes?title=${title}&tag=${tag}`);
-    setNotes(response.data);
+    const { data } = await api.get(`/notes?title=${title}&tag=${tag}`);
+
+    setNotes(data);
     setTagsSelected(tag);
   }
 
