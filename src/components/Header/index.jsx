@@ -7,7 +7,7 @@ import { api } from '../../services/api';
 import { Link } from 'react-router-dom';
 import { Input } from '../Input';
 
-export function Header({ fetch, readOnly }) {
+export function Header({ fetch }) {
   const { signOut, user } = useAuth();
 
   const navigate = useNavigate();
