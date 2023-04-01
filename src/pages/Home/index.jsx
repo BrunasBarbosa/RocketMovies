@@ -9,21 +9,22 @@ import { EmptyData } from '../../components/EmptyData';
 
 export function Home() {
   const [notes, setNotes] = useState([]);
-  const [tagsSelected, setTagsSelected] = useState([]);
 
   function clearNoteDataLocal() {
     return localStorage.removeItem('@moviesnotes:note');
   }
 
-  async function fetchNotes(title, tag) {
-    const { data } = await api.get(`/notes?title=${title}&tag=${tag}`);
+  async function fetchNotes(title, tagName) {
+    const { data } = await api.get(`/notes?title=${title}&tag=${tagName}`);
 
-    setNotes(data);
-    setTagsSelected(tag);
+    return setNotes(data);
   }
 
   useEffect(() => {
-    fetchNotes(notes, tagsSelected);
+    const title = [];
+    const tagName = [];
+
+    fetchNotes(title, tagName);
     clearNoteDataLocal();
   }, []);
 

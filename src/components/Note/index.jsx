@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-
 import { Container } from './styles';
 import { Rate } from '../Rate';
 import { Tag } from '../Tag';
@@ -23,7 +22,12 @@ export function Note({ data, onClick, fetch, ...rest }) {
       {
         data.tags &&
         <footer>
-          {data.tags.map(tag => <Tag key={tag.id} title={tag.name} onClick={() => fetch([], tag.name)} />)}
+          {data.tags.map(tag =>
+            <Tag
+              key={tag.id}
+              title={tag.name}
+              onClick={() => { fetch([], tag.name); }}
+            />)}
         </footer>
       }
     </Container>
