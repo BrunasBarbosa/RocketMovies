@@ -15,9 +15,12 @@ export function Home() {
 
   const filterOn = title.length > 0 || tagName.length > 0;
 
+  const inputSearch = document.querySelector('input');
+
   function handleRemoveFilter() {
     setTitle([]);
     setTagName([]);
+    inputSearch.value = '';
   }
 
   function clearNoteDataLocal() {
