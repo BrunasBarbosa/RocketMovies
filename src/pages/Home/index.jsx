@@ -36,14 +36,8 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetchNotes(title, tagName);
+    if (!filterOn) fetchNotes(title, tagName);
     clearNoteDataLocal();
-  }, []);
-
-  useEffect(() => {
-    if (!filterOn) {
-      fetchNotes(title, tagName);
-    }
   }, [title, tagName]);
 
   return (
