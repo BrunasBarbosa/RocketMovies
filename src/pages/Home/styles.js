@@ -26,6 +26,12 @@ export const Section = styled.div`
     line-height: 4.2rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
+
+  div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const Content = styled.div`
